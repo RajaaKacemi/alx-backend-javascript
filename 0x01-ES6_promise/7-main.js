@@ -1,17 +1,17 @@
-import loadBalancer from "./7-load_balancer";
+import loadBalancer from './7-load_balancer.js';
 
 const ukSuccess = 'Downloading from UK is faster';
 const frSuccess = 'Downloading from FR is faster';
 
-const promiseUK = new Promise(function(resolve, reject) {
+const promiseUK = new Promise(function(resolve) {
     setTimeout(resolve, 100, ukSuccess);
 });
 
-const promiseUKSlow = new Promise(function(resolve, reject) {
+const promiseUKSlow = new Promise(function(resolve) {
     setTimeout(resolve, 400, ukSuccess);
 });
 
-const promiseFR = new Promise(function(resolve, reject) {
+const promiseFR = new Promise(function(resolve) {
     setTimeout(resolve, 200, frSuccess);
 });
 
@@ -21,4 +21,3 @@ const test = async () => {
 }
 
 test();
-
